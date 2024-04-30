@@ -2,14 +2,14 @@
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
-<a href="https://appktavsiei5995.pc.xiaoe-tech.com/index" target="_blank"><img class="my_header_icon" src="https://img.shields.io/static/v1?label=精品课程&message=查看&color=pink&style=flat"></a>
+<a href="https://labuladong.online/algo/" target="_blank"><img class="my_header_icon" src="https://img.shields.io/static/v1?label=精品课程&message=查看&color=pink&style=flat"></a>
 <a href="https://www.zhihu.com/people/labuladong"><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@labuladong-000000.svg?style=flat-square&logo=Zhihu"></a>
 <a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
 </p>
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员，全新纸质书[《labuladong 的算法笔记》](https://labuladong.gitee.io/algo/images/book/book_intro_qrcode.jpg) 出版，签名版限时半价！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[新版网站会员](https://labuladong.online/algo/intro/site-vip/) 限时优惠；算法可视化编辑器上线，[点击体验](https://labuladong.online/algo/intro/visualize/)！另外，建议你在我的 [网站](https://labuladong.online/algo/) 学习文章，体验更好。**
 
 
 
@@ -42,7 +42,7 @@ LRU 缓存淘汰算法就是一种常用策略。LRU 的全称是 Least Recently
 
 ![](https://labuladong.github.io/pictures/LRU算法/3.jpg)
 
-现在你应该理解 LRU（Least Recently Used）策略了。当然还有其他缓存淘汰策略，比如不要按访问的时序来淘汰，而是按访问频率（LFU 策略）来淘汰等等，各有应用场景。本文讲解 LRU 算法策略，我会在 [LFU 算法详解](https://labuladong.github.io/article/fname.html?fname=LFU) 中讲解 LFU 算法。
+现在你应该理解 LRU（Least Recently Used）策略了。当然还有其他缓存淘汰策略，比如不要按访问的时序来淘汰，而是按访问频率（LFU 策略）来淘汰等等，各有应用场景。本文讲解 LRU 算法策略，我会在 [LFU 算法详解](https://labuladong.online/algo/fname.html?fname=LFU) 中讲解 LFU 算法。
 
 ### 一、LRU 算法描述
 
@@ -185,13 +185,14 @@ class DoubleList {
 }
 ```
 
+如果对链表的操作不熟悉，可以看前文 [手把手带你实现双链表](https://labuladong.online/algo/fname.html?fname=链表基础)。
+
 到这里就能回答刚才「为什么必须要用双向链表」的问题了，因为我们需要删除操作。删除一个节点不光要得到该节点本身的指针，也需要操作其前驱节点的指针，而双向链表才能支持直接查找前驱，保证操作的时间复杂度 O(1)。
 
 **注意我们实现的双链表 API 只能从尾部插入，也就是说靠尾部的数据是最近使用的，靠头部的数据是最久未使用的**。
 
 有了双向链表的实现，我们只需要在 LRU 算法中把它和哈希表结合起来即可，先搭出代码框架：
 
-<!-- muliti_language -->
 ```java
 class LRUCache {
     // key -> Node(key, val)
@@ -214,7 +215,6 @@ class LRUCache {
 
 说的有点玄幻，实际上很简单，就是尽量让 LRU 的主方法 `get` 和 `put` 避免直接操作 `map` 和 `cache` 的细节。我们可以先实现下面几个函数：
 
-<!-- muliti_language -->
 ```java
 class LRUCache {
     // 为了节约篇幅，省略上文给出的代码部分...
@@ -264,7 +264,6 @@ class LRUCache {
 
 上述方法就是简单的操作封装，调用这些函数可以避免直接操作 `cache` 链表和 `map` 哈希表，下面我先来实现 LRU 算法的 `get` 方法：
 
-<!-- muliti_language -->
 ```java
 class LRUCache {
     // 为了节约篇幅，省略上文给出的代码部分...
@@ -286,7 +285,6 @@ class LRUCache {
 
 这样我们可以轻松写出 `put` 方法的代码：
 
-<!-- muliti_language -->
 ```java
 class LRUCache {
     // 为了节约篇幅，省略上文给出的代码部分...
@@ -312,7 +310,6 @@ class LRUCache {
 
 至此，你应该已经完全掌握 LRU 算法的原理和实现了，我们最后用 Java 的内置类型 `LinkedHashMap` 来实现 LRU 算法，逻辑和之前完全一致，我就不过多解释了：
 
-<!-- muliti_language -->
 ```java
 class LRUCache {
     int cap;
@@ -357,11 +354,11 @@ class LRUCache {
 }
 ```
 
-至此，LRU 算法就没有什么神秘的了。更多数据结构设计相关的题目参见 [数据结构设计经典习题](https://appktavsiei5995.pc.xiaoe-tech.com/detail/i_6312b9e5e4b0eca59c2b7e93/1)。
+至此，LRU 算法就没有什么神秘的了。更多数据结构设计相关的题目参见 [数据结构设计经典习题](https://labuladong.online/algo/fname.html?fname=设计习题)。
 
 接下来可阅读：
 
-* [手把手带你实现 LFU 算法](https://labuladong.github.io/article/fname.html?fname=LFU)
+* [手把手带你实现 LFU 算法](https://labuladong.online/algo/fname.html?fname=LFU)
 
 
 
@@ -369,11 +366,11 @@ class LRUCache {
 <details class="hint-container details">
 <summary><strong>引用本文的文章</strong></summary>
 
- - [一文看懂 session 和 cookie](https://labuladong.github.io/article/fname.html?fname=session和cookie)
- - [常数时间删除/查找数组中的任意元素](https://labuladong.github.io/article/fname.html?fname=随机集合)
- - [数据结构设计：最大栈](https://labuladong.github.io/article/fname.html?fname=最大栈)
- - [算法就像搭乐高：带你手撸 LFU 算法](https://labuladong.github.io/article/fname.html?fname=LFU)
- - [算法笔试「骗分」套路](https://labuladong.github.io/article/fname.html?fname=刷题技巧)
+ - [一文读懂 session 和 cookie](https://labuladong.online/algo/fname.html?fname=session和cookie)
+ - [常数时间删除/查找数组中的任意元素](https://labuladong.online/algo/fname.html?fname=随机集合)
+ - [数据结构设计：最大栈](https://labuladong.online/algo/fname.html?fname=最大栈)
+ - [算法就像搭乐高：带你手撸 LFU 算法](https://labuladong.online/algo/fname.html?fname=LFU)
+ - [算法笔试「骗分」套路](https://labuladong.online/algo/fname.html?fname=刷题技巧)
 
 </details><hr>
 
@@ -384,7 +381,7 @@ class LRUCache {
 <details class="hint-container details">
 <summary><strong>引用本文的题目</strong></summary>
 
-<strong>安装 [我的 Chrome 刷题插件](https://labuladong.github.io/article/fname.html?fname=chrome插件简介) 点开下列题目可直接查看解题思路：</strong>
+<strong>安装 [我的 Chrome 刷题插件](https://labuladong.online/algo/intro/chrome/) 点开下列题目可直接查看解题思路：</strong>
 
 | LeetCode | 力扣 |
 | :----: | :----: |
@@ -397,7 +394,7 @@ class LRUCache {
 
 **＿＿＿＿＿＿＿＿＿＿＿＿＿**
 
-**《labuladong 的算法小抄》已经出版，关注公众号查看详情；后台回复「**全家桶**」可下载配套 PDF 和刷题全家桶**：
+**《labuladong 的算法笔记》已经出版，关注公众号查看详情；后台回复「**全家桶**」可下载配套 PDF 和刷题全家桶**：
 
 ![](https://labuladong.github.io/pictures/souyisou2.png)
 

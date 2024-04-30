@@ -2,14 +2,14 @@
 
 <p align='center'>
 <a href="https://github.com/labuladong/fucking-algorithm" target="view_window"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
-<a href="https://appktavsiei5995.pc.xiaoe-tech.com/index" target="_blank"><img class="my_header_icon" src="https://img.shields.io/static/v1?label=精品课程&message=查看&color=pink&style=flat"></a>
+<a href="https://labuladong.online/algo/" target="_blank"><img class="my_header_icon" src="https://img.shields.io/static/v1?label=精品课程&message=查看&color=pink&style=flat"></a>
 <a href="https://www.zhihu.com/people/labuladong"><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@labuladong-000000.svg?style=flat-square&logo=Zhihu"></a>
 <a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
 </p>
 
 ![](https://labuladong.github.io/pictures/souyisou1.png)
 
-**通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 和 [递归算法专题课](https://aep.xet.tech/s/3YGcq3) 限时附赠网站会员，全新纸质书[《labuladong 的算法笔记》](https://labuladong.gitee.io/algo/images/book/book_intro_qrcode.jpg) 出版，签名版限时半价！另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
+**通知：[新版网站会员](https://labuladong.online/algo/intro/site-vip/) 限时优惠；算法可视化编辑器上线，[点击体验](https://labuladong.online/algo/intro/visualize/)！另外，建议你在我的 [网站](https://labuladong.online/algo/) 学习文章，体验更好。**
 
 
 
@@ -25,11 +25,8 @@
 **-----------**
 
 
-> info：在开头先打个广告，我的 [手把手刷二叉树课程](https://aep.xet.tech/s/3YGcq3) 按照公式和套路讲解了 150 道二叉树题目，只需一顿饭钱，就能手把手带你刷完二叉树分类的题目，迅速掌握递归思维，让你豁然开朗。我绝对有这个信心，信不信，可以等你看完我的二叉树算法系列文章再做评判。
 
-
-
-我们前文 [东哥带你刷二叉搜索树（特性篇）](https://labuladong.github.io/article/fname.html?fname=BST1) 介绍了 BST 的基本特性，还利用二叉搜索树「中序遍历有序」的特性来解决了几道题目，本文来实现 BST 的基础操作：判断 BST 的合法性、增、删、查。其中「删」和「判断合法性」略微复杂。
+我们前文 [东哥带你刷二叉搜索树（特性篇）](https://labuladong.online/algo/fname.html?fname=BST1) 介绍了 BST 的基本特性，还利用二叉搜索树「中序遍历有序」的特性来解决了几道题目，本文来实现 BST 的基础操作：判断 BST 的合法性、增、删、查。其中「删」和「判断合法性」略微复杂。
 
 BST 的基础操作主要依赖「左小右大」的特性，可以在二叉树中做类似二分搜索的操作，寻找一个元素的效率很高。比如下面这就是一棵合法的二叉树：
 
@@ -312,7 +309,7 @@ void BST(TreeNode root, int target) {
 
 3、根据代码框架掌握了 BST 的增删查改操作。
 
-本文就到这里，更多经典的二叉树习题以及递归思维的训练，请参见 [手把手带你刷通二叉树](https://aep.xet.tech/s/3YGcq3)。
+本文就到这里，更多经典的二叉树习题以及递归思维的训练，请参见二叉树章节中的 [递归专项练习](https://labuladong.online/algo/fname.html?fname=习题搜索树1)
 
 
 
@@ -320,10 +317,10 @@ void BST(TreeNode root, int target) {
 <details class="hint-container details">
 <summary><strong>引用本文的文章</strong></summary>
 
- - [东哥带你刷二叉搜索树（构造篇）](https://labuladong.github.io/article/fname.html?fname=BST3)
- - [二叉树的递归转迭代的代码框架](https://labuladong.github.io/article/fname.html?fname=迭代遍历二叉树)
- - [前缀树算法模板秒杀五道算法题](https://labuladong.github.io/article/fname.html?fname=trie)
- - [后序遍历的妙用](https://labuladong.github.io/article/fname.html?fname=后序遍历)
+ - [东哥带你刷二叉搜索树（构造篇）](https://labuladong.online/algo/fname.html?fname=BST3)
+ - [二叉树的递归转迭代的代码框架](https://labuladong.online/algo/fname.html?fname=迭代遍历二叉树)
+ - [前缀树算法模板秒杀五道算法题](https://labuladong.online/algo/fname.html?fname=trie)
+ - [后序遍历的妙用](https://labuladong.online/algo/fname.html?fname=后序遍历)
 
 </details><hr>
 
@@ -334,7 +331,7 @@ void BST(TreeNode root, int target) {
 <details class="hint-container details">
 <summary><strong>引用本文的题目</strong></summary>
 
-<strong>安装 [我的 Chrome 刷题插件](https://labuladong.github.io/article/fname.html?fname=chrome插件简介) 点开下列题目可直接查看解题思路：</strong>
+<strong>安装 [我的 Chrome 刷题插件](https://labuladong.online/algo/intro/chrome/) 点开下列题目可直接查看解题思路：</strong>
 
 | LeetCode | 力扣 |
 | :----: | :----: |
@@ -347,6 +344,6 @@ void BST(TreeNode root, int target) {
 
 **＿＿＿＿＿＿＿＿＿＿＿＿＿**
 
-**《labuladong 的算法小抄》已经出版，关注公众号查看详情；后台回复「**全家桶**」可下载配套 PDF 和刷题全家桶**：
+**《labuladong 的算法笔记》已经出版，关注公众号查看详情；后台回复「**全家桶**」可下载配套 PDF 和刷题全家桶**：
 
 ![](https://labuladong.github.io/pictures/souyisou2.png)
